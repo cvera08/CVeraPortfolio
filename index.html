@@ -567,7 +567,7 @@
           </div>
           <div class="footer" data-reactid="209"><span data-reactid="210">
               Made by Carlos Vera ©
-              2022
+              <span id="copyright-year">2026</span>
             </span></div>
         </div>
       </div>
@@ -587,6 +587,7 @@
     $(function () {
       showText("#cv-title", "Carlos Vera", 0, 80);
     });
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
   </script>
 
 </body>
