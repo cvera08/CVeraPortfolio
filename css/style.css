@@ -256,6 +256,8 @@ table {
 
 .projects-container .project-card .project-image {
   width: 80%;
+  height: 100%;
+  object-fit: cover;
   position: absolute !important;
   top: 0;
   left: 0
