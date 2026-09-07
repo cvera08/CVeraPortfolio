@@ -115,7 +115,7 @@ table {
   align-items: center
 }
 
-.hero-container .hero-title-row:before {
+.hero-container .hero-name-block:before {
   content: ">\A0"
 }
 
