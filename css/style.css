@@ -537,3 +537,22 @@ a:hover {
   margin-top: 30px;
   width: 50px
 }
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid #747fe0;
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .hero-avatar { width: 64px; height: 64px; }
+  .hero-title-row { gap: 1rem; }
+}
