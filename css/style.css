@@ -117,7 +117,7 @@ table {
 
 .hero-container .hero-name-block:before {
   content: ">\A0";
-  margin-right: -0.15em;
+  margin-right: -0.35em;
 }
 
 @media (max-width:767px) {
