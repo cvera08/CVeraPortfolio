@@ -543,7 +543,7 @@ a:hover {
 .hero-title-row {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .hero-avatar {
   width: 90px;
