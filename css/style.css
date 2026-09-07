@@ -116,7 +116,8 @@ table {
 }
 
 .hero-container .hero-name-block:before {
-  content: ">\A0"
+  content: ">\A0";
+  margin-right: -0.15em;
 }
 
 @media (max-width:767px) {
@@ -543,7 +544,7 @@ a:hover {
 .hero-title-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .hero-avatar {
   width: 90px;
