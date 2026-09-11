@@ -559,3 +559,16 @@ a:hover {
   .hero-avatar { width: 56px; height: 56px; }
   .hero-title-row { gap: 1rem; }
 }
+
+@media (max-width: 400px) {
+  .hero-container .hero-title {
+    font-size: 1.6em;
+  }
+  .hero-avatar {
+    width: 44px;
+    height: 44px;
+  }
+  .hero-title-row {
+    gap: 0.6rem;
+  }
+}
