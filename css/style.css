@@ -556,6 +556,6 @@ a:hover {
   flex-shrink: 0;
 }
 @media (max-width: 767px) {
-  .hero-avatar { width: 80px; height: 80px; }
+  .hero-avatar { width: 56px; height: 56px; }
   .hero-title-row { gap: 1rem; }
 }
