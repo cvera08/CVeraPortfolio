@@ -127,7 +127,7 @@ table {
 }
 
 .hero-container .hero-title span {
-  background-color: rgba(116, 127, 224, .65);
+  background-color: rgba(30, 161, 243, .65);
   animation: caret 1s steps(1) infinite
 }
 
