@@ -30,6 +30,7 @@ jobs:
           npx playwright screenshot \
             --browser chromium \
             --viewport-size "1280,800" \
+            --full-page \
             https://cvera-portfolio.vercel.app/ \
             static/live-preview.png
 
@@ -38,4 +39,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add static/live-preview.png
-          git diff --staged --quiet || (git commit -m "chore: update live preview [skip ci]" && git push)
+          if ! git diff --staged --quiet; then
+            TRIGGER_DATE=$(git log -1 --format="%aI" HEAD)
+            COMMIT_DATE=$(date -d "$TRIGGER_DATE + 5 minutes" --iso-8601=seconds)
+            GIT_AUTHOR_DATE="$COMMIT_DATE" GIT_COMMITTER_DATE="$COMMIT_DATE" \
+              git commit -m "chore: update live preview [skip ci]"
+            git push
+          fi
