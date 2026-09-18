@@ -12,6 +12,8 @@ LLM evaluation, AI testing, and test automation for AI-powered products.
 
 ![Live Preview](static/live-preview.png)
 
+*Updated automatically via GitHub Actions on every push.*
+
 ---
 
 ## Run locally
