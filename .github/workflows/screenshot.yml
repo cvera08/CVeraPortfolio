@@ -1,0 +1,41 @@
+name: Update Live Preview Screenshot
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - 'static/live-preview.png'
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Wait for Vercel deploy
+        run: sleep 60
+
+      - name: Take screenshot
+        run: |
+          npx playwright screenshot \
+            --browser chromium \
+            --viewport-size "1280,800" \
+            https://cvera-portfolio.vercel.app/ \
+            static/live-preview.png
+
+      - name: Commit screenshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/live-preview.png
+          git diff --staged --quiet || (git commit -m "chore: update live preview [skip ci]" && git push)

@@ -8,6 +8,12 @@ LLM evaluation, AI testing, and test automation for AI-powered products.
 
 ---
 
+## Live Preview
+
+![Live Preview](static/live-preview.png)
+
+---
+
 ## Run locally
 
 No build step required. From the project folder:
