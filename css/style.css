@@ -404,7 +404,7 @@ table {
 }
 
 .contact-links span:after {
-  content: "||";
+  content: "•";
   color: #525f7f;
   margin: 0 30px
 }
